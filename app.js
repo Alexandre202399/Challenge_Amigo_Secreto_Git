@@ -24,7 +24,8 @@ function atualizarListaAmigos(amigos) {
     }
 }
 
-function sortearAmigo() { 
+function sortearAmigo() {
+    if (amigos.length > 0) {
         const numeroAleatorio = Math.floor(Math.random() * amigos.length);
         const amigoSorteado = amigos[numeroAleatorio];
 
@@ -35,4 +36,7 @@ function sortearAmigo() {
         elementoLista.textContent = `O amigo sorteado foi: ${amigoSorteado}`;
 
         listaDeResultado.appendChild(elementoLista);
+    } else {
+        alert("Por favor, adicione um nome na lista.");
     }
+}
