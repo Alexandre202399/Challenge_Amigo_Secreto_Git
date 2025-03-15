@@ -23,3 +23,16 @@ function atualizarListaAmigos(amigos) {
         listaDeAmigos.appendChild(itemLista);
     }
 }
+
+function sortearAmigo() { 
+        const numeroAleatorio = Math.floor(Math.random() * amigos.length);
+        const amigoSorteado = amigos[numeroAleatorio];
+
+        const listaDeResultado = document.getElementById("resultado");
+        listaDeResultado.innerHTML = "";
+
+        const elementoLista = document.createElement("li");
+        elementoLista.textContent = `O amigo sorteado foi: ${amigoSorteado}`;
+
+        listaDeResultado.appendChild(elementoLista);
+    }
